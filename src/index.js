@@ -8,9 +8,20 @@ import "./index.css"
 //	return <h1>Hello, World!</h1> // JavaScript and XML (JSX) element --> h1
 // }
 
+function Tasks(props) {
+	// console.log(props);
+	return (
+			// <li className="tasks-item"> Follow Edukasyon.ph on Facebook.</li>
+			<li className="tasks-item"> {props.taskName} </li>
+		);
+}
+
 function TasksList() {
 	return (
 		<ul>
+			<Tasks  taskName = "Follow Edukasyon.ph on Facebook." />
+			<Tasks  taskName = "Follow AWS Siklab on Facebook." />
+			<Tasks  taskName = "Follow Zuitt Coding Bootcamp on Facebook." />
 			<li className="tasks-item"> Follow Edukasyon.ph on Facebook.</li>
 			<li className="tasks-item"> Follow AWS Siklab on Facebook.</li>
 			<li className="tasks-item"> Follow Zuitt Coding Bootcamp on Facebook.</li>
