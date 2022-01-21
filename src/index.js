@@ -1,40 +1,14 @@
 import React from "react";
 
 import ReactDOM from "react-dom";
-import "./index.css"
+import "./index.css";
+import TasksList from "./components/TasksList";
 
 // My First Component
 // function HelloWorld() {
 //	return <h1>Hello, World!</h1> // JavaScript and XML (JSX) element --> h1
 // }
 
-function Tasks(props) {
-	console.log(props);
-	return (
-			// <li className="tasks-item"> Follow Edukasyon.ph on Facebook.</li>
-			<li className="tasks-item"> {props.taskName} </li>
-		);
-}
-
-function TasksList() {
-	const taskItemList = [
-		"Follow Edukasyon.ph on Facebook.",
-		"Follow AWS Siklab on Facebook.",
-		"Follow Zuitt Coding Bootcamp on Facebook.",
-		"Follow Zuitt Coding Bootcamp on Instagram."
-	];
-	return (
-		<>
-		<input className="task-input" />
-		<ul>
-			{taskItemList.map((task, index)  => { 
-				// console.log(task);
-				return <Tasks key={index} taskName={task} />;
-			})}
-		</ul>
-		</>
-		);
-}
 
 function App() {
 	const paraStyle = {
@@ -58,3 +32,4 @@ function App() {
 // ReactDOM.render(<HelloWorld />, document.getElementById("root"));
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
