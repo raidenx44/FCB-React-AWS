@@ -9,7 +9,7 @@ import "./index.css"
 // }
 
 function Tasks(props) {
-	// console.log(props);
+	console.log(props);
 	return (
 			// <li className="tasks-item"> Follow Edukasyon.ph on Facebook.</li>
 			<li className="tasks-item"> {props.taskName} </li>
@@ -17,14 +17,18 @@ function Tasks(props) {
 }
 
 function TasksList() {
+	const taskItemList = [
+		"Follow Edukasyon.ph on Facebook.",
+		"Follow AWS Siklab on Facebook.",
+		"Follow Zuitt Coding Bootcamp on Facebook.",
+		"Follow Zuitt Coding Bootcamp on Instagram."
+	];
 	return (
 		<ul>
-			<Tasks  taskName = "Follow Edukasyon.ph on Facebook." />
-			<Tasks  taskName = "Follow AWS Siklab on Facebook." />
-			<Tasks  taskName = "Follow Zuitt Coding Bootcamp on Facebook." />
-			<li className="tasks-item"> Follow Edukasyon.ph on Facebook.</li>
-			<li className="tasks-item"> Follow AWS Siklab on Facebook.</li>
-			<li className="tasks-item"> Follow Zuitt Coding Bootcamp on Facebook.</li>
+			{taskItemList.map((task, index)  => { 
+				// console.log(task);
+				return <Tasks key={index} taskName={task} />;
+			})}
 		</ul>
 		);
 }
